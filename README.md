@@ -25,15 +25,15 @@ Time spent: **10** hours spent in total
   - [X] Affected source code:
     - [Link 1](https://blog.checkpoint.com/2015/09/15/finding-vulnerabilities-in-core-wordpress-a-bug-hunters-trilogy-part-iii-ultimatum/)
     - [Link 2](https://blog.knownsec.com/2015/09/wordpress-vulnerability-analysis-cve-2015-5714-cve-2015-5715/)
-### 3. (Required) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
+### 3. (Required) WordPress  4.0-4.7.2 - Authenticated Stored Cross-Site Scripting (XSS) in YouTube URL Embeds
+  - [X] Summary: 
+    - Vulnerability types: XSS
+    - Tested in version: 4.2
+    - Fixed in version: 4.2.13
   - [ ] GIF Walkthrough: 
   - [ ] Steps to recreate: 
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+  - [X] Affected source code:
+    - [Link 1](https://blog.sucuri.net/wp-content/uploads/2017/03/sample-xss1.jpg)
 ### 4. (Optional) Vulnerability Name or ID
   - [ ] Summary: 
     - Vulnerability types:
@@ -43,6 +43,7 @@ Time spent: **10** hours spent in total
   - [ ] Steps to recreate: 
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+    - [Link 2](https://github.com/WordPress/WordPress/commit/419c8d97ce8df7d5004ee0b566bc5e095f0a6ca8)
 ### 5. (Optional) Vulnerability Name or ID
   - [ ] Summary: 
     - Vulnerability types:
