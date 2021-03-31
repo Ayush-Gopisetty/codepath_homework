@@ -20,8 +20,8 @@ Time spent: **10** hours spent in total
     - Vulnerability types: XSS
     - Tested in version: 4.2
     - Fixed in version: 4.2.5
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
+  - [ ] GIF Walkthrough: <img src="WordPress Exploit 2.gif" alt="WordPress Exploit 2">
+  - [ ] Steps to recreate: First go to either wpdistillery.vm or 192.168.33.10 as an admin and then go to the Dashboard. Then, in the Dashboard, click on Posts and after you click on Posts, click on Add New. After you click on Add New, insert the following text into the body of the Text box: `TEST!!![caption width="1" caption='<a href="' ">]</a><a href="http://onMouseOver='alert(1)'">Click me</a>`. After you have added the following text into the body of the Text box, click Publish and view the post. Finally, when viewing the post, an alert will pop up when hovering over or clicking on the tag showing that an XSS attack has been performed.
   - [ ] Affected source code:
     - [Link 1](https://blog.checkpoint.com/2015/09/15/finding-vulnerabilities-in-core-wordpress-a-bug-hunters-trilogy-part-iii-ultimatum/)
     - [Link 2](https://blog.knownsec.com/2015/09/wordpress-vulnerability-analysis-cve-2015-5714-cve-2015-5715/)
