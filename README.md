@@ -34,6 +34,7 @@ Time spent: **10** hours spent in total
   - [ ] Steps to recreate: 
   - [X] Affected source code:
     - [Link 1](https://blog.sucuri.net/wp-content/uploads/2017/03/sample-xss1.jpg)
+    - [Link 2](https://github.com/WordPress/WordPress/commit/419c8d97ce8df7d5004ee0b566bc5e095f0a6ca8)
 ### 4. (Optional) Vulnerability Name or ID
   - [ ] Summary: 
     - Vulnerability types:
@@ -43,7 +44,6 @@ Time spent: **10** hours spent in total
   - [ ] Steps to recreate: 
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-    - [Link 2](https://github.com/WordPress/WordPress/commit/419c8d97ce8df7d5004ee0b566bc5e095f0a6ca8)
 ### 5. (Optional) Vulnerability Name or ID
   - [ ] Summary: 
     - Vulnerability types:
