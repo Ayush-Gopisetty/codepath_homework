@@ -33,7 +33,7 @@ Time spent: **10** hours spent in total
   - [X] GIF Walkthrough: <img src="WordPress Exploit 3.gif" alt="WordPress Exploit 3">
   - [X] Steps to recreate: First go to either wpdistillery.vm or 192.168.33.10 as an admin and then go to the Dashboard. Then, in the Dashboard, click on Posts and after you click on Posts, click on Add New. After you click on Add New, insert the following text into the body of the Text box: `[embed src='https://youtube.com/embed/12345\x3csvg onload=alert(1)\x3e'][/embed]`. After you have added the following text into the body of the Text box, click Publish and view the post. Finally, an alert will pop up when you view the post showing that an XSS attack has been performed.
   - [X] Affected source code:
-    - [Link 1](https://blog.sucuri.net/wp-content/uploads/2017/03/sample-xss1.jpg)
+    - [Link 1](https://blog.sucuri.net/2017/03/stored-xss-in-wordpress-core.html)
     - [Link 2](https://github.com/WordPress/WordPress/commit/419c8d97ce8df7d5004ee0b566bc5e095f0a6ca8)
 ### 4. (Optional) Vulnerability Name or ID
   - [ ] Summary: 
