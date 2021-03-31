@@ -7,13 +7,13 @@ Time spent: **10** hours spent in total
 ## Pentesting Report
 
 ### 1. (Required) WordPress <= 4.2.2 - Authenticated Stored Cross-Site Scripting (XSS)
-  - [ ] Summary: 
+  - [X] Summary: 
     - Vulnerability types: XSS
     - Tested in version: 4.2
     - Fixed in version: 4.2.3
-  - [ ] GIF Walkthrough: <img src="WordPress Exploit 1.gif" alt="WordPress Exploit 1">
-  - [ ] Steps to recreate: First go to either wpdistillery.vm or 192.168.33.10 as an admin and then go to the Dashboard. Then, in the Dashboard, click on Pages and after you click on Pages, click on Add New. After you click on Add New, insert the following text into body of the Text box: `<a href="</a><a title=" onmouseover=alert('test')  ">link</a>`. After you have added the following text into the body of the Text box, click Publish and view the page. Finally, when viewing the page, an alert will pop up when hovering over the link showing that an XSS attack has been performed.
-  - [ ] Affected source code: 
+  - [X] GIF Walkthrough: <img src="WordPress Exploit 1.gif" alt="WordPress Exploit 1">
+  - [X] Steps to recreate: First go to either wpdistillery.vm or 192.168.33.10 as an admin and then go to the Dashboard. Then, in the Dashboard, click on Pages and after you click on Pages, click on Add New. After you click on Add New, insert the following text into body of the Text box: `<a href="</a><a title=" onmouseover=alert('test')  ">link</a>`. After you have added the following text into the body of the Text box, click Publish and view the page. Finally, when viewing the page, an alert will pop up when hovering over the link showing that an XSS attack has been performed.
+  - [X] Affected source code: 
     - [Link 1](https://klikki.fi/adv/wordpress3.html)
 ### 2. (Required) Vulnerability Name or ID
   - [ ] Summary: 
