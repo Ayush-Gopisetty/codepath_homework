@@ -19,7 +19,7 @@ Each color is vulnerable to only 2 of the 6 possible exploits. First discover wh
 
 Vulnerability #1: Session Hijacking/Fixation
 
-Description:
+Description: Session Hijacking allows an attacker to steal the active session of a user to gain access to actions and information on the user's website. Session Fixation allows an attacker to provide a user with a session identifier for the attacker to gain information and actions from the user's website.
 
 <img src="blue-vuln1.gif">
 
@@ -33,7 +33,7 @@ Description:
 
 Vulnerability #1: Cross-Site Scripting
 
-Description:
+Description: Cross Site Scripting allows an attacker to run malicious JavaScripts on a user's website.
 
 <img src="green-vuln1.gif">
 
@@ -48,7 +48,7 @@ Description:
 
 Vulnerability #1: Insecure Direct Object Reference
 
-Description:
+Description: Insecure Direct Object Reference allows a user to access a restricted resource based on the input of the user.
 
 <img src="red-vuln1.gif">
 
