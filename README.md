@@ -19,7 +19,7 @@ Each color is vulnerable to only 2 of the 6 possible exploits. First discover wh
 
 Vulnerability #1: Session Hijacking/Fixation
 
-Description: Session Hijacking allows an attacker to steal the active session of a user to gain access to actions and information on the user's website. Session Fixation allows an attacker to provide a user with a session identifier for the attacker to gain information and actions from the user's website. 
+Description: Session Hijacking allows an attacker to steal the active session of a user to gain access to actions and information on the user's website. Session Fixation allows an attacker to provide a user with a session identifier for the attacker to gain information and actions from the user's website. Session Hijacking/Fixation works when the
 
 <img src="blue-vuln1.gif">
 
