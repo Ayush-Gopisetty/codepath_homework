@@ -43,7 +43,25 @@ gcloud compute instances create "mhn-admin" ^
     --boot-disk-type "pd-standard" ^
     --boot-disk-device-name "mhn-admin"
 ```
-After using the following command to create the MHN-Admin, I was able to run MHN-Admin VM by using the command `gcloud compute ssh mhn-admin`. After creating the MHN-Admin, I had to install the MHN-Admin application in order to deploy the MHN-Admin. In order to install the MHN-Admin application , I first had to run the MHN-Admin VM and after running MHN-Admin VM, I had to use the following command to retrieve the 
+After using the following command to create the MHN-Admin, I was able to run MHN-Admin VM by using the command `gcloud compute ssh mhn-admin`. After creating the MHN-Admin, I had to install the MHN-Admin application in order to deploy the MHN-Admin. In order to install the MHN-Admin application , I first had to run the MHN-Admin VM and after running MHN-Admin VM, I had to use the following command to get the latest packages and to have some dependencies be installed.
+```
+sudo apt update
+sudo apt install git python-magic -y
+```
+After getting the latest packages and having some dependies be installed, I downloaded MHN and changed the version of FLASK-SQLAlchemy from 2.3.2 to 2.5.1 by using the following commands on MHN-Admin VM.
+```
+cd /opt/
+sudo git clone https://github.com/pwnlandia/mhn.git
+cd mhn/
+cd server
+sudo apt install nano
+sudo nano requirements.txt
+```
+After using the following command to download MHN and change the version of FLASK-SQLAlchemy from 2.3.2 to 2.5.1, I installed MHN by using the following commands.
+```
+cd ..
+sudo ./install.sh
+```
 
 <img src="mhn-admin.gif">
 
