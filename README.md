@@ -75,7 +75,7 @@ After installing MHN by using the following command, I can deploy MHN-Admin by l
 ### Database Backup (Required) 
 
 **Summary:** What is the RDBMS that MHN-Admin uses? What information does the exported JSON file record?
-The RDBMS that MHN-Admin uses in MongoDB. The information that the exported JSON file records is ID, Protocol, HPFeed ID, timestamp, source IP, Source Port, Destination Port, Identifier, and Honeypot of each of the attacks on the MHN-Admin.
+The RDBMS that MHN-Admin uses is MongoDB. The information that the exported JSON file records is ID, Protocol, HPFeed ID, timestamp, source IP, Source Port, Destination Port, Identifier, and Honeypot of each of the attacks on the MHN-Admin.
 
 *Be sure to upload session.json directly to this GitHub repo/branch in order to get full credit.*
 
