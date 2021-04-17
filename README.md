@@ -43,7 +43,7 @@ gcloud compute instances create "mhn-admin" ^
     --boot-disk-type "pd-standard" ^
     --boot-disk-device-name "mhn-admin"
 ```
-After using the following command to create the MHN-Admin, I was able to run MHN-Admin VM by using the command `gcloud compute ssh mhn-admin`.
+After using the following command to create the MHN-Admin, I was able to run MHN-Admin VM by using the command `gcloud compute ssh mhn-admin`. After creating the MHN-Admin, I had to install the MHN-Admin application in order to deploy the MHN-Admin. 
 
 <img src="mhn-admin.gif">
 
