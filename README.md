@@ -7,7 +7,7 @@
 ### MHN-Admin Deployment (Required)
 
 **Summary:** How did you deploy it? Did you use GCP, AWS, Azure, Vagrant, VirtualBox, etc.?
-In order to for me to deploy MHN-Admin, I had to create the MHN-Admin VM and install the MHM-Admin application and I used GCP in order to create the MHN-Admin VM and install the MHN-Admin application. Before creating the MHN-Admin VM and installing the MHN-Admin application, I first had to install the GCP SDK on my local machine and initialize the GCP SDK by using the command `gcloud init` on the Google Cloud SDK shell. After initializing the GCP SDK, I set a default region by using the command `gcloud config set compute/region us-central1` and I set a default zone by using the command `gcloud config set compute/zone us-central1-f`. After setting a default region and zone, I ran the command `gcloud config list` to see that I had configured my project, region, and zone right. In order to create the MHN-Admin VM, I had to create the firewall rules that will allow for the MHN-Admin's inbound ports to be enabled by using the following commands.
+In order to for me to deploy MHN-Admin, I had to create the MHN-Admin VM and install the MHM-Admin application and I used GCP in order to create the MHN-Admin VM and install the MHN-Admin application. Before creating the MHN-Admin VM and installing the MHN-Admin application, I first had to install the GCP SDK on my local machine and initialize the GCP SDK by using the command `gcloud init` on the Google Cloud SDK Shell. After initializing the GCP SDK, I set a default region by using the command `gcloud config set compute/region us-central1` and I set a default zone by using the command `gcloud config set compute/zone us-central1-f`. After setting a default region and zone, I ran the command `gcloud config list` to see that I had configured my project, region, and zone right. In order to create the MHN-Admin VM, I had to create the firewall rules that will allow for the MHN-Admin's inbound ports to be enabled by using the following commands on the Google Cloud SDK Shell.
 
 ```
 gcloud compute firewall-rules list
@@ -30,7 +30,19 @@ gcloud compute firewall-rules create hpfeeds ^
     --direction ingress ^
     --target-tags="mhn-admin"
 ```
-After using the following commands to 
+After using the following commands to allow for the MHN-Admin's inbound ports to be enabled, I created the MHN-Admin VM by using the following command.
+```
+gcloud compute instances create "mhn-admin" ^
+    --machine-type "n1-standard-1" ^
+    --subnet "default" ^
+    --maintenance-policy "MIGRATE" ^
+    --tags "mhn-admin" ^
+    --image "ubuntu-minimal-1804-bionic-v20200703a" ^
+    --image-project "ubuntu-os-cloud" ^
+    --boot-disk-size "10" ^
+    --boot-disk-type "pd-standard" ^
+    --boot-disk-device-name "mhn-admin"
+```
 
 <img src="mhn-admin.gif">
 
