@@ -69,7 +69,7 @@ After installing MHN by using the following command, I can deploy MHN-Admin by l
 ### Dionaea Honeypot Deployment (Required)
 
 **Summary:** Briefly in your own words, what does dionaea do?
-Dionaea is a honeypot that catches the samples of malware.
+Dionaea is a honeypot that catches the binaries of malware samples.
 
 <img src="dionaea-honeypot.gif">
 
