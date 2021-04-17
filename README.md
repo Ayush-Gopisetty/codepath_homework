@@ -7,6 +7,27 @@
 ### MHN-Admin Deployment (Required)
 
 **Summary:** How did you deploy it? Did you use GCP, AWS, Azure, Vagrant, VirtualBox, etc.?
+In order to for me to deploy MHN-Admin, I had to create the MHN-Admin VM and install the MHM-Admin application and I used GCP in order to create the MHN-Admin VM and install the MHN-Admin application. Before creating the MHN-Admin VM and installing the MHN-Admin application, I first had to install the GCP SDK on my local machine and initialize the GCP SDK by using the command `gcloud init` on the Google Cloud SDK shell. After initializing the GCP SDK, I set a default region by using the command `gcloud config set compute/region us-central1` and I set a default zone by using the command `gcloud config set compute/zone us-central1-f`. After setting a default region and zone, I ran the command `gcloud config list` to see that I had configured my project, region, and zone right. In order to create the MHN-Admin VM, I had to create the firewall rules that will allow for the MHN-Admin's inbound ports to be enabled by using the following commands.
+`gcloud compute firewall-rules list
+
+gcloud compute firewall-rules create http ^
+    --allow tcp:80 ^
+    --description="Allow HTTP from Anywhere" ^
+    --direction ingress ^
+    --target-tags="mhn-admin"
+
+gcloud compute firewall-rules create honeymap ^
+    --allow tcp:3000 ^
+    --description="Allow HoneyMap Feature from Anywhere" ^
+    --direction ingress ^
+    --target-tags="mhn-admin"
+
+gcloud compute firewall-rules create hpfeeds ^
+    --allow tcp:10000 ^
+    --description="Allow HPFeeds from Anywhere" ^
+    --direction ingress ^
+    --target-tags="mhn-admin"`
+After using the following commands to 
 
 <img src="mhn-admin.gif">
 
