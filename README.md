@@ -94,7 +94,7 @@ gcloud compute instances create "honeypot-1" ^
     --boot-disk-type "pd-standard" ^
     --boot-disk-device-name "honeypot-1"
 ```
-After using the following command to create the VM for the Dionaea Honeypot, I used the command `gcloud compute ssh honeypot-1` to run the VM for the Dionaea Honeypot. After running the VM for the Dionaea Honey, I used the command `wget "http://35.239.165.255/api/script/?text=true&script_id=2" -O deploy.sh && sudo bash deploy.sh http://35.239.165.255 WocfRze8` in the Dionaea Honeypot VM to install the sortware for the Dionaea Honeypot and to deploy the Dionaea Honeypot.
+After using the following command to create the VM for the Dionaea Honeypot, I used the command `gcloud compute ssh honeypot-1` to run the VM for the Dionaea Honeypot. After running the VM for the Dionaea Honey, I used the command `wget "http://35.239.165.255/api/script/?text=true&script_id=2" -O deploy.sh && sudo bash deploy.sh http://35.239.165.255 WocfRze8` in the Dionaea Honeypot VM to install the sortware for the Dionaea Honeypot and to deploy the Dionaea Honeypot. After deploying the Dionaea Honeypot, I was able to attract attackers to attack the Dionaea Honeypot in order for the Dionaea Honeypot to catch the binaries of malware samples.
 
 <img src="dionaea-honeypot.gif">
 
