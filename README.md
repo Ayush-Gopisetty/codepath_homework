@@ -69,7 +69,31 @@ After installing MHN by using the following command, I can deploy MHN-Admin by l
 ### Dionaea Honeypot Deployment (Required)
 
 **Summary:** Briefly in your own words, what does dionaea do?
-Dionaea is a honeypot that catches the binaries of malware samples.
+Dionaea is a honeypot that catches the binaries of malware samples. In order for me to deploy Dionaea Honeypot, I first had to create a firewall rule that will have all ports for the honeypot sensors to allow the incoming UDP and TCP traffic by using the following command.
+```
+gcloud compute firewall-rules create wideopen ^
+    --description="Allow TCP and UDP from Anywhere" ^
+    --direction ingress ^
+    --priority=1000 ^
+    --network=default ^
+    --action=allow ^
+    --rules=tcp,udp ^
+    --source-ranges=0.0.0.0/0 ^
+    --target-tags="honeypot"
+```
+After using the following command to create a firewall rule that will allow for the honeypot sensors to allow the incoming UDP and TCP traffic, I created a VM for the honeypot by using the following command.
+```
+gcloud compute instances create "honeypot-1" ^
+    --machine-type "n1-standard-1" ^
+    --subnet "default" ^
+    --maintenance-policy "MIGRATE" ^
+    --tags "honeypot" ^
+    --image "ubuntu-minimal-1804-bionic-v20200703a" ^
+    --image-project "ubuntu-os-cloud" ^
+    --boot-disk-size "10" ^
+    --boot-disk-type "pd-standard" ^
+    --boot-disk-device-name "honeypot-1"
+```
 
 <img src="dionaea-honeypot.gif">
 
