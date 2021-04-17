@@ -62,6 +62,7 @@ After using the following command to download MHN and change the version of FLAS
 cd ..
 sudo ./install.sh
 ```
+After installing MHN by using the following command, I can deploy MHN-Admin by loading the external IP of the MHN-Admin, which is 35.239.165.255, in a browser and logging onto the admin console. I used GCP in order for me to deploy the MHN-Admin.
 
 <img src="mhn-admin.gif">
 
